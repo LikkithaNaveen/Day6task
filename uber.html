@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class uberride {//class
+            constructor(timeinride, ridedistance) {
+
+                this.timeinride = timeinride
+                this.ridedistance = ridedistance
+            }
+            getprice() {
+                //Base Fare + (Cost per minute * time in ride(drop-start)min) + (Cost per mile * ride distance) + Booking Fee = Your Fare
+                var basefare = 10, costpermin = 6, costpermile = 7, bookingfee = 15
+
+                var totalfare = basefare + (costpermin * this.timeinride) + (costpermile * this.ridedistance) + bookingfee
+                console.log("total for this ride", totalfare)
+            }
+
+        }
+        var ride1 = new uberride(12, 7)
+        var ride2 = new uberride(5, 3)
+        var ride3 = new uberride(12, 6)
+        var ride4 = new uberride(15, 8)
+
+        var rides = [ride1, ride2, ride3, ride4]
+        for (var i = 0; i < rides.length; i++) {
+            var ride = rides[i];
+            ride.getprice()
+        }
+    </script>
+</body>
+
+</html>

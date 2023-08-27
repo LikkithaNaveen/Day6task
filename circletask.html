@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Circle {
+            constructor(radius, colour) {
+                //this.pi=22.7
+                // this.radius=radius
+                // this.colour=colour
+                if (radius == null) {
+                    this.radius = 1.0
+                }
+                else {
+                    this.radius = radius
+                }
+                if (colour == null) {
+                    this.colour = "red"
+                }
+                else {
+                    this.colour = colour
+                }
+
+
+
+            }
+
+            getarea() {
+                // if(radius==null && colour==null){
+                //     this.radius=1.0
+                //     this.colour="red"
+                //     area=22.7*this.radius*this.radius
+                //     console.log(`the colour of the area  is ${this.colour} and value is  ${area}`)
+                // }
+                // else if(radius==null || colour==null){
+                //     this.radius=1.0
+                //     this.colour="red"
+                //     area=22.7*this.radius*this.radius
+                //     console.log(`the colour of the area  is ${this.colour} and value is  ${area}`)
+                // }
+                // else{
+                // this.radius=1.0
+                // this.colour="red"
+                var area = 22.7 * this.radius * this.radius
+                console.log(`the colour of the area  is ${this.colour} and value is  ${area}`)
+                // }
+
+            }
+
+        }
+        var circle = new Circle(3, "red")
+        var circle1 = new Circle(1.0, "blue")
+        var circle2 = new Circle(8.9, "black")
+        var circle3 = new Circle(5.5, "violet")
+        var circle4 = new Circle()
+
+        var circlearray=[circle,circle1,circle2,circle3,circle4]
+
+        for(var i=0;i<circlearray.length;i++)
+        {
+            let s=circlearray[i];
+            s.getarea()    
+        }
+
+    </script>
+</body>
+
+</html>
